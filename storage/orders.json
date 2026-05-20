@@ -1,0 +1,13 @@
+[
+    {
+        "id": 1,
+        "car_id": 3,
+        "car_brand": "BMW",
+        "car_model": "5 Series",
+        "car_price": 15999.0,
+        "buyer_name": "іваол",
+        "buyer_phone": "0967853",
+        "buyer_email": "user@gmail.com",
+        "status": "Нове"
+    }
+]

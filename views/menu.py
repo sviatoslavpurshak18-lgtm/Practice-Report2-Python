@@ -70,6 +70,8 @@ REGIONS = [
 ]
 TYPES = ["Легкові", "Вантажівки", "Мотоцикли", "Автобуси"]
 
+LABEL_STYLE = ft.TextStyle(size=14, color=DARK)
+
 
 def _trigger(label_ctrl, on_click, width=220):
     return ft.Container(
@@ -80,7 +82,7 @@ def _trigger(label_ctrl, on_click, width=220):
         ]),
         bgcolor=WHITE, border_radius=8,
         border=ft.border.all(1, LGREY),
-        padding=ft.padding.symmetric(horizontal=14, vertical=10),
+        padding=ft.padding.symmetric(horizontal=14, vertical=14),
         width=width, on_click=on_click,
     )
 
@@ -111,21 +113,25 @@ class MainView:
             label="Тип транспорту", width=200,
             options=[ft.dropdown.Option(t) for t in TYPES],
             bgcolor=WHITE, border_color=LGREY, color=DARK, text_size=14,
+            label_style=LABEL_STYLE,
         )
         self.dd_fuel = ft.Dropdown(
             label="Пальне", width=200,
             options=[ft.dropdown.Option(f) for f in FUELS],
             bgcolor=WHITE, border_color=LGREY, color=DARK, text_size=14,
+            label_style=LABEL_STYLE,
         )
         self.dd_gear = ft.Dropdown(
-            label="Коробка передач", width=200,
+            label="Коробка передач", width=240,
             options=[ft.dropdown.Option(g) for g in GEARS],
             bgcolor=WHITE, border_color=LGREY, color=DARK, text_size=14,
+            label_style=LABEL_STYLE,
         )
         self.dd_region = ft.Dropdown(
             label="Регіон", width=200,
             options=[ft.dropdown.Option(r) for r in REGIONS],
             bgcolor=WHITE, border_color=LGREY, color=DARK, text_size=14,
+            label_style=LABEL_STYLE,
         )
 
         self._init_brand_picker()
@@ -235,7 +241,7 @@ class MainView:
     # PICKER: Марка / Модель
     # ══════════════════════════════════════════════════════════════════════════
     def _init_brand_picker(self):
-        self.brand_label  = ft.Text("Марка, Модель", size=14, color=GREY)
+        self.brand_label = ft.Text("Марка, Модель", size=14, color=DARK)
         self.brand_search = ft.TextField(
             label="Пошук марки", width=280, bgcolor=WHITE,
             border_color=LGREY, color=DARK, text_size=13,
@@ -331,7 +337,7 @@ class MainView:
     # PICKER: Рік випуску
     # ══════════════════════════════════════════════════════════════════════════
     def _init_year_picker(self):
-        self.year_label    = ft.Text("Рік випуску", size=14, color=GREY)
+        self.year_label    = ft.Text("Рік випуску", size=14, color=DARK)
         self.year_from_col = ft.Column(spacing=2, scroll=ft.ScrollMode.AUTO, height=200)
         self.year_to_col   = ft.Column(spacing=2, scroll=ft.ScrollMode.AUTO, height=200)
         self._fill_years()
@@ -401,7 +407,7 @@ class MainView:
     # PICKER: Вартість
     # ══════════════════════════════════════════════════════════════════════════
     def _init_price_picker(self):
-        self.price_label = ft.Text("Вартість", size=14, color=GREY)
+        self.price_label = ft.Text("Вартість", size=14, color=DARK)
         self.tf_p_from = ft.TextField(
             label="Від $", width=250, bgcolor=WHITE, border_color=LGREY,
             color=DARK, text_size=13, keyboard_type=ft.KeyboardType.NUMBER,
@@ -486,8 +492,10 @@ class MainView:
             row = []
             for i, car in enumerate(cars):
                 row.append(self._car_card(car))
-                if len(row) == 3 or i == len(cars) - 1:
-                    self.car_list.controls.append(ft.Row(row, spacing=14, wrap=True))
+                if len(row) == 4 or i == len(cars) - 1:
+                    self.car_list.controls.append(
+                        ft.Row(row, spacing=14, alignment=ft.MainAxisAlignment.SPACE_BETWEEN)
+                    )
                     row = []
 
         self.count_text.value = f"Знайдено: {len(cars)} авт."
@@ -497,17 +505,16 @@ class MainView:
         sl = {"available": "Доступний", "sold": "Продано", "returned": "Повернено"}
         sc = {"available": "#27ae60", "sold": RED, "returned": "#f39c12"}
 
-        # Фото або заглушка
         if getattr(car, "image", "") and car.image:
             photo = ft.Container(
-                width=300, height=180,
+                width=340, height=180,
                 border_radius=ft.border_radius.only(top_left=10, top_right=10),
                 clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
-                content=ft.Image(src=car.image, width=300, height=180, fit="cover"),
+                content=ft.Image(src=car.image, width=340, height=180, fit="cover"),
             )
         else:
             photo = ft.Container(
-                width=300, height=180, bgcolor="#e2e6f0",
+                width=340, height=180, bgcolor="#e2e6f0",
                 border_radius=ft.border_radius.only(top_left=10, top_right=10),
                 content=ft.Column([
                     ft.Icon(ft.Icons.DIRECTIONS_CAR, size=52, color="#b0b8cc"),
@@ -548,11 +555,10 @@ class MainView:
                     padding=ft.padding.symmetric(horizontal=12, vertical=10),
                 ),
             ], spacing=0),
-            bgcolor=WHITE, border_radius=10, width=300,
+            bgcolor=WHITE, border_radius=10, width=340,
             shadow=ft.BoxShadow(blur_radius=8, color="#18000000", offset=ft.Offset(0, 2)),
             clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
         )
-
 
     def _show_detail(self, car):
         def close(e):
@@ -568,6 +574,7 @@ class MainView:
                                     content_padding=ft.padding.symmetric(horizontal=12, vertical=10))
             tf_phone = ft.TextField(label="Телефон", width=360, bgcolor=WHITE,
                                     border_color=LGREY, color=DARK, text_size=14,
+                                    value="+380",
                                     keyboard_type=ft.KeyboardType.PHONE,
                                     content_padding=ft.padding.symmetric(horizontal=12, vertical=10))
             tf_email = ft.TextField(label="Email", width=360, bgcolor=WHITE,
@@ -645,7 +652,6 @@ class MainView:
             buy_dlg.open = True
             self.page.update()
 
-        # Фото у деталях або заглушка
         if getattr(car, "image", "") and car.image:
             detail_photo = ft.Container(
                 width=400, height=220,
