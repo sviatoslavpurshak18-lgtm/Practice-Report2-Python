@@ -1,10 +1,10 @@
-from storage.json_handler import JsonStorage
+from services.json_handler import JsonStorage
 from models.customer import Customer
 
 
 class CustomerService:
     def __init__(self):
-        self.storage = JsonStorage("customers.json")
+        self.storage = JsonStorage("../storage/customers.json")
         self.customers = [Customer(**c) for c in self.storage.load()]
 
     def login(self, email, password):

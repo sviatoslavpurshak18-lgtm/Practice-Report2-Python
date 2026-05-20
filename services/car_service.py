@@ -1,4 +1,4 @@
-from storage.json_handler import JsonStorage
+from services.json_handler import JsonStorage
 from models.car import Car
 
 
@@ -7,10 +7,11 @@ class CarService:
         self.storage = JsonStorage("cars.json")
         self.cars = [Car(**c) for c in self.storage.load()]
 
-    def add_car(self, brand, model, price, year, region, fuel, gearbox):
+    def add_car(self, brand, model, price, year, region, fuel, gearbox,
+                mileage=0, city="", body_type="", image=""):
         new_id = max([c.id for c in self.cars], default=0) + 1
-
-        car = Car(new_id, brand, model, price, year, region, fuel, gearbox)
+        car = Car(new_id, brand, model, price, year, region, fuel, gearbox,
+                  mileage=mileage, city=city, body_type=body_type, image=image)
         self.cars.append(car)
         self.save()
 
@@ -42,4 +43,3 @@ class CarService:
 
     def get_models_by_brand(self, brand: str):
         return list(set(c.model for c in self.cars if c.brand == brand and c.model))
-

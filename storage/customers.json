@@ -1,13 +1,19 @@
 [
     {
         "id": 1,
-        "name": "Пуршак Святослав",
-        "email": "sviatoslavpurshak@gmail.com",
-        "password": "Matusia261089"
+        "name": "Іван",
+        "email": "ivan@gmail.com",
+        "password": "3456"
     },
     {
         "id": 2,
-        "name": "Свят",
+        "name": "maria",
+        "email": "maria@gmail.com",
+        "password": "7890"
+    },
+    {
+        "id": 3,
+        "name": "іван",
         "email": "user@gmail.com",
         "password": "1234"
     }

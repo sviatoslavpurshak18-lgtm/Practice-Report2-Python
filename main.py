@@ -30,4 +30,4 @@ def main(page: ft.Page):
     go("/")
 
 if __name__ == "__main__":
-    ft.app(target=main)
+    ft.run(main, view=ft.AppView.WEB_BROWSER)

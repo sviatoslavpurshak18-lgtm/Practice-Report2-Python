@@ -48,7 +48,7 @@ class LoginView:
         self.switch_btn = ft.TextButton("Зареєструватись",
                                          style=ft.ButtonStyle(color=RED),
                                          on_click=self.toggle)
-        self.submit_btn = ft.ElevatedButton(
+        self.submit_btn = ft.Button(
             "Увійти", width=340,
             style=ft.ButtonStyle(
                 bgcolor=RED, color=WHITE,
@@ -71,7 +71,7 @@ class LoginView:
                                                   weight=ft.FontWeight.BOLD, color=WHITE),
                                  bgcolor=RED, border_radius=4,
                                  padding=ft.padding.symmetric(horizontal=8, vertical=3)),
-                    ft.Container(content=ft.Text("RIA", size=17,
+                    ft.Container(content=ft.Text("UA", size=17,
                                                   weight=ft.FontWeight.BOLD, color=WHITE),
                                  bgcolor="#003580", border_radius=4,
                                  padding=ft.padding.symmetric(horizontal=8, vertical=3)),

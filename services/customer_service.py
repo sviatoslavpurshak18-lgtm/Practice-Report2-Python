@@ -1,4 +1,4 @@
-from storage.json_handler import JsonStorage
+from services.json_handler import JsonStorage
 from models.customer import Customer
 
 
