@@ -8,8 +8,6 @@ BG    = "#f0f2f5"
 DARK  = "#1a1a2e"
 GREY  = "#8a8fa8"
 LGREY = "#d4d8e6"
-
-BODY_TYPES = ["Седан","Хетчбек","Позашляховик","Кросовер","Мінівен","Купе","Пікап"]
 FUELS = ["Бензин", "Дизель", "Електро", "Гібрид", "Газ", "Бензин + Газ (ГБО)",
          "Плагін-гібрид", "Водень", "Біопаливо", "Метан", "Пропан", "Етанол"]
 GEARS      = ["Автомат","Механіка","Робот","Варіатор"]
@@ -83,7 +81,6 @@ class SellView:
         self.tf_brand  = _tf("Введіть марку авто")
         self.tf_model  = _tf("Введіть модель авто")
         self.dd_year   = _dd(YEARS, width=200)
-        self.dd_body   = _dd(BODY_TYPES)
         self.dd_fuel   = _dd(FUELS)
         self.dd_gear   = _dd(GEARS)
         self.dd_region = _dd(REGIONS)
@@ -195,7 +192,6 @@ class SellView:
                 _row("Модель авто",     self.tf_model),
                 _row("Рік випуску",     self.dd_year),
                 _row("Пробіг",          self.tf_miles,  required=False),
-                _row("Тип кузова",      self.dd_body),
                 _row("Модифікація",     self.tf_mod,    required=False),
                 _row("Регіон",          self.dd_region),
                 _row("Місто",           self.dd_city),
@@ -238,7 +234,6 @@ class SellView:
             (self.tf_brand,  "Марка"),
             (self.tf_model,  "Модель"),
             (self.dd_year,   "Рік"),
-            (self.dd_body,   "Тип кузова"),
             (self.dd_region, "Регіон"),
             (self.dd_city,   "Місто"),
             (self.tf_price,  "Ціна"),
@@ -266,7 +261,6 @@ class SellView:
             gearbox=self.dd_gear.value or "",
             mileage=miles,
             city=self.dd_city.value or "",
-            body_type=self.dd_body.value or "",
             image=self.image_path["v"],
         )
 

@@ -10,7 +10,7 @@ GREY  = "#8a8fa8"
 LGREY = "#d4d8e6"
 
 MODELS = {
-    "BMW": ["3 Series","5 Series","7 Series","X1","X3","X5","X6","M3","M5"],
+    "BMW": ["3 Series","5 Series","7 Series","X1","X3","X5","X6",'X7',"M3","M5"],
     "Mercedes-Benz": ["C-Class","E-Class","S-Class","GLC","GLE","GLS","A-Class","CLA"],
     "Audi": ["A3","A4","A6","A8","Q3","Q5","Q7","Q8","TT","RS6"],
     "Toyota": ["Camry","Corolla","RAV4","Land Cruiser","Highlander","Yaris","Prius"],
