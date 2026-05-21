@@ -38,7 +38,7 @@
         "status": "Доступно",
         "mileage": 0,
         "city": "Київ",
-        "image":"https://cdn.riastatic.com/photosnewr/auto/new_auto_storage/kia-sorento__2562201-1280x720x90.webp"
+        "image":"https://cdn2.riastatic.com/photosnew/auto/photo/kia_sorento__527774417f.jpg"
     },
     {
         "id": 4,
@@ -109,6 +109,45 @@
         "mileage": 190,
         "city": "Вінниця",
         "image":"https://cdn3.riastatic.com/photosnew/auto/photo/renault_megane__641854328hd.webp"
+    },
+    {     "id": 9,
+          "brand": "Audi",
+          "model": "A3",
+          "price": 15700.0,
+          "year": 2016,
+          "region": "Дніпропетровська",
+          "fuel": "Бензин",
+          "gearbox": "Автомат",
+          "status": "Доступно",
+          "mileage": 120,
+          "city": "Дніпро",
+          "image":"https://cdn0.riastatic.com/photosnew/auto/photo/audi_a3__627651375hd.webp"
+    },
+    {
+        "id": 10,
+        "brand": "Audi",
+        "model": "A6",
+        "price": 46500.0,
+        "year": 2023,
+        "region": "Київська",
+        "fuel": "Дизель",
+        "gearbox": "Автомат",
+        "status": "Доступно",
+        "mileage": 51,
+        "city": "Київ",
+        "image":"https://nextcar.ua/images/detailed/547/30_y5gx-so.jpg"
+    },
+    {     "id": 11,
+          "brand": "Audi",
+          "model": "RS6",
+          "price": 108000.0,
+          "year": 2021,
+          "region": "Київська",
+          "fuel": "Гібид",
+          "gearbox": "Автомат",
+          "status": "Доступно",
+          "mileage": 48,
+          "city": "Київ",
+          "image":"https://cdn4.riastatic.com/photosnew/auto/photo/audi_rs6__635886499hd.webp"
     }
-
-   ]
+]
