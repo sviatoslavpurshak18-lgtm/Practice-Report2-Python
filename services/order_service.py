@@ -1,7 +1,6 @@
 from services.json_handler import JsonStorage
 from models.order import Order
 
-
 class OrderService:
     def __init__(self):
         self.storage = JsonStorage("orders.json")
