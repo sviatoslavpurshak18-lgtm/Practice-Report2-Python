@@ -23,7 +23,7 @@ class LoginView:
         self.page.clean()
         self.page.bgcolor = BG
 
-        self.tf_name  = ft.TextField(label="Ім'я та прізвище", width=340,
+        self.tf_name  = ft.TextField(label="Ім'я або Нік-нейм", width=340,
                                       bgcolor=WHITE, border_color=LGREY,
                                       focused_border_color=RED, color=DARK)
         self.tf_email = ft.TextField(label="Email", width=340,

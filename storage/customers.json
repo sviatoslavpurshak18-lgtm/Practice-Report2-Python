@@ -3,18 +3,18 @@
         "id": 1,
         "name": "Іван",
         "email": "ivan@gmail.com",
-        "password": "3456"
+        "password": "345673529"
     },
     {
         "id": 2,
-        "name": "maria",
+        "name": "Maria",
         "email": "maria@gmail.com",
-        "password": "7890"
+        "password": "78906543"
     },
     {
         "id": 3,
-        "name": "іван",
+        "name": "Іван",
         "email": "user@gmail.com",
-        "password": "1234"
+        "password": "12345678"
     }
 ]

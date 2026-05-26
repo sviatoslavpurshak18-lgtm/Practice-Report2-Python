@@ -113,16 +113,16 @@ class SellView:
             if not files:
                 self.photo_name.value = "Вибір скасовано"
             else:
-                f    = files[0]
+                f = files[0]
                 self.photo_name.value = f.name
                 ext  = f.name.split(".")[-1].lower()
                 mime = {"jpg": "image/jpeg", "jpeg": "image/jpeg",
                         "png": "image/png",  "webp": "image/webp"}.get(ext, "image/jpeg")
-                b64      = base64.b64encode(f.bytes).decode("utf-8")
+                b64 = base64.b64encode(f.bytes).decode("utf-8")
                 data_url = f"data:{mime};base64,{b64}"
                 self.photo_preview.content = ft.Image(
                     src=data_url, width=280, height=180,
-                    fit="cover", border_radius=12)
+                    fit=ft.BoxFit.COVER, border_radius=12)
                 self.image_path["v"] = data_url
             self.page.update()
 
@@ -137,7 +137,7 @@ class SellView:
                 ft.Row([
                     self.photo_preview,
                     ft.Column([
-                        ft.ElevatedButton(
+                        ft.Button(
                             "📁  Обрати фото", width=220,
                             style=ft.ButtonStyle(
                                 bgcolor="#f0f4ff", color=DARK,
@@ -202,7 +202,7 @@ class SellView:
                 photo_block,
                 self.err_text,
                 ft.Container(height=8),
-                ft.ElevatedButton(
+                ft.Button(
                     "📤  Опублікувати оголошення", width=700,
                     style=ft.ButtonStyle(
                         bgcolor=RED, color=WHITE,

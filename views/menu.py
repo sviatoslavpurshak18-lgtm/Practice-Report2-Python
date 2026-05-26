@@ -180,14 +180,14 @@ class MainView:
                 ft.TextButton("Вийти",
                     on_click=lambda e: self.on_logout() if self.on_logout else None,
                     style=ft.ButtonStyle(color=GREY)),
-                ft.ElevatedButton("+ Продати авто",
+                ft.Button("+ Продати авто",
                     on_click=lambda e: self.on_sell() if self.on_sell else None,
                     style=ft.ButtonStyle(bgcolor=RED, color=WHITE,
                         shape=ft.RoundedRectangleBorder(radius=8),
                         padding=ft.padding.symmetric(horizontal=16, vertical=9))),
             ], spacing=8, vertical_alignment=ft.CrossAxisAlignment.CENTER)
         else:
-            right = ft.ElevatedButton("+ Продати авто",
+            right = ft.Button("+ Продати авто",
                 on_click=lambda e: self.on_sell() if self.on_sell else None,
                 style=ft.ButtonStyle(bgcolor=RED, color=WHITE,
                     shape=ft.RoundedRectangleBorder(radius=8),
@@ -354,7 +354,7 @@ class MainView:
                     ft.Column([ft.Text("До", size=13, weight=ft.FontWeight.W_600, color=DARK),
                                self.year_to_col], expand=True),
                 ], spacing=12),
-                ft.ElevatedButton("Застосувати", width=280,
+                ft.Button("Застосувати", width=280,
                     style=ft.ButtonStyle(bgcolor=RED, color=WHITE,
                         shape=ft.RoundedRectangleBorder(radius=10),
                         padding=ft.padding.symmetric(vertical=12)),
@@ -425,7 +425,7 @@ class MainView:
                 ft.Text("Вартість $", size=14, weight=ft.FontWeight.W_600, color=DARK),
                 self.tf_p_from,
                 self.tf_p_to,
-                ft.ElevatedButton("Застосувати", width=250,
+                ft.Button("Застосувати", width=250,
                     style=ft.ButtonStyle(bgcolor=RED, color=WHITE,
                         shape=ft.RoundedRectangleBorder(radius=10),
                         padding=ft.padding.symmetric(vertical=12)),
@@ -510,7 +510,7 @@ class MainView:
                 width=340, height=180,
                 border_radius=ft.border_radius.only(top_left=10, top_right=10),
                 clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
-                content=ft.Image(src=car.image, width=340, height=180, fit="cover"),
+                content=ft.Image(src=car.image, width=340, height=180, fit=ft.BoxFit.COVER),
             )
         else:
             photo = ft.Container(
@@ -635,7 +635,7 @@ class MainView:
                 actions=[
                     ft.TextButton("Скасувати",
                         on_click=lambda e: (setattr(buy_dlg, "open", False), self.page.update())),
-                    ft.ElevatedButton(
+                    ft.Button(
                         "Підтвердити",
                         on_click=confirm_buy,
                         style=ft.ButtonStyle(
@@ -657,7 +657,7 @@ class MainView:
                 width=400, height=220,
                 border_radius=12,
                 clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
-                content=ft.Image(src=car.image, width=400, height=220, fit="cover"),
+                content=ft.Image(src=car.image, width=400, height=220, fit=ft.BoxFit.COVER),
             )
         else:
             detail_photo = ft.Container(

@@ -1,4 +1,5 @@
-[{
+[
+    {
         "id": 1,
         "brand": "Toyota",
         "model": "Camry",
@@ -10,7 +11,8 @@
         "status": "Доступно",
         "mileage": 191,
         "city": "Львів",
-        "image":"https://cdn1.riastatic.com/photosnew/auto/photo/toyota_camry__641596811hd.webp"
+        "body_type": "",
+        "image": "https://cdn1.riastatic.com/photosnew/auto/photo/toyota_camry__641596811hd.webp"
     },
     {
         "id": 2,
@@ -24,7 +26,8 @@
         "status": "Доступно",
         "mileage": 20,
         "city": "Київ",
-        "image":"https://cdn3.riastatic.com/photosnew/auto/photo/kia_sportage__642641408hd.webp"
+        "body_type": "",
+        "image": "https://cdn3.riastatic.com/photosnew/auto/photo/kia_sportage__642641408hd.webp"
     },
     {
         "id": 3,
@@ -38,7 +41,8 @@
         "status": "Доступно",
         "mileage": 0,
         "city": "Київ",
-        "image":"https://cdn2.riastatic.com/photosnew/auto/photo/kia_sorento__527774417f.jpg"
+        "body_type": "",
+        "image": "https://cdn2.riastatic.com/photosnew/auto/photo/kia_sorento__527774417f.jpg"
     },
     {
         "id": 4,
@@ -52,7 +56,8 @@
         "status": "Доступно",
         "mileage": 90,
         "city": "Полтава",
-        "image":"https://cdn0.riastatic.com/photosnew/auto/photo/mazda_cx-5__642790420hd.webp"
+        "body_type": "",
+        "image": "https://cdn0.riastatic.com/photosnew/auto/photo/mazda_cx-5__642790420hd.webp"
     },
     {
         "id": 5,
@@ -66,7 +71,8 @@
         "status": "Доступно",
         "mileage": 101,
         "city": "Житомир",
-        "image":"https://cdn2.riastatic.com/photosnew/auto/photo/nissan_x-trail__641074562hd.webp"
+        "body_type": "",
+        "image": "https://cdn2.riastatic.com/photosnew/auto/photo/nissan_x-trail__641074562hd.webp"
     },
     {
         "id": 6,
@@ -80,7 +86,8 @@
         "status": "Доступно",
         "mileage": 212,
         "city": "Львів",
-        "image":"https://cdn3.riastatic.com/photosnew/auto/photo/opel_astra__641382568hd.webp"
+        "body_type": "",
+        "image": "https://cdn3.riastatic.com/photosnew/auto/photo/opel_astra__641382568hd.webp"
     },
     {
         "id": 7,
@@ -94,7 +101,8 @@
         "status": "Доступно",
         "mileage": 228,
         "city": "Івано-Франківськ",
-        "image":"https://cdn3.riastatic.com/photosnew/auto/photo/ford_focus__640889443hd.webp"
+        "body_type": "",
+        "image": "https://cdn3.riastatic.com/photosnew/auto/photo/ford_focus__640889443hd.webp"
     },
     {
         "id": 8,
@@ -108,20 +116,23 @@
         "status": "Доступно",
         "mileage": 190,
         "city": "Вінниця",
-        "image":"https://cdn3.riastatic.com/photosnew/auto/photo/renault_megane__641854328hd.webp"
+        "body_type": "",
+        "image": "https://cdn3.riastatic.com/photosnew/auto/photo/renault_megane__641854328hd.webp"
     },
-    {     "id": 9,
-          "brand": "Audi",
-          "model": "A3",
-          "price": 15700.0,
-          "year": 2016,
-          "region": "Дніпропетровська",
-          "fuel": "Бензин",
-          "gearbox": "Автомат",
-          "status": "Доступно",
-          "mileage": 120,
-          "city": "Дніпро",
-          "image":"https://cdn0.riastatic.com/photosnew/auto/photo/audi_a3__627651375hd.webp"
+    {
+        "id": 9,
+        "brand": "Audi",
+        "model": "A3",
+        "price": 15700.0,
+        "year": 2016,
+        "region": "Дніпропетровська",
+        "fuel": "Бензин",
+        "gearbox": "Автомат",
+        "status": "Доступно",
+        "mileage": 120,
+        "city": "Дніпро",
+        "body_type": "",
+        "image": "https://cdn0.riastatic.com/photosnew/auto/photo/audi_a3__627651375hd.webp"
     },
     {
         "id": 10,
@@ -135,19 +146,46 @@
         "status": "Доступно",
         "mileage": 51,
         "city": "Київ",
-        "image":"https://nextcar.ua/images/detailed/547/30_y5gx-so.jpg"
+        "body_type": "",
+        "image": "https://nextcar.ua/images/detailed/547/30_y5gx-so.jpg"
     },
-    {     "id": 11,
-          "brand": "Audi",
-          "model": "RS6",
-          "price": 108000.0,
-          "year": 2021,
-          "region": "Київська",
-          "fuel": "Гібид",
-          "gearbox": "Автомат",
-          "status": "Доступно",
-          "mileage": 48,
-          "city": "Київ",
-          "image":"https://cdn4.riastatic.com/photosnew/auto/photo/audi_rs6__635886499hd.webp"
+    {
+        "id": 11,
+        "brand": "Audi",
+        "model": "RS6",
+        "price": 108000.0,
+        "year": 2021,
+        "region": "Київська",
+        "fuel": "Гібид",
+        "gearbox": "Автомат",
+        "status": "Доступно",
+        "mileage": 48,
+        "city": "Київ",
+        "body_type": "",
+        "image": "https://cdn4.riastatic.com/photosnew/auto/photo/audi_rs6__635886499hd.webp"
+    },
+    {
+        "id": 12,
+        "brand": "Audi",
+        "model": "TT",
+        "price": 17900.0,
+        "year": 2015,
+        "region": "Рівненська",
+        "fuel": "Бензин",
+        "gearbox": "Автомат",
+        "status": "Доступно",
+        "mileage": 153,
+        "city": "Рівне",
+        "body_type": "",
+        "image": "Audi TT.png"
     }
 ]
+
+
+
+
+
+
+
+
+

@@ -9,5 +9,49 @@
         "buyer_phone": "0967853",
         "buyer_email": "user@gmail.com",
         "status": "Нове"
+    },
+    {
+        "id": 2,
+        "car_id": 1,
+        "car_brand": "Toyota",
+        "car_model": "Camry",
+        "car_price": 17999.0,
+        "buyer_name": "свят",
+        "buyer_phone": "+3809701",
+        "buyer_email": "ім",
+        "status": "Нове"
+    },
+    {
+        "id": 3,
+        "car_id": 1,
+        "car_brand": "Toyota",
+        "car_model": "Camry",
+        "car_price": 17999.0,
+        "buyer_name": "34",
+        "buyer_phone": "+380цкуе",
+        "buyer_email": "куе",
+        "status": "Нове"
+    },
+    {
+        "id": 4,
+        "car_id": 2,
+        "car_brand": "Kia",
+        "car_model": "Sportage",
+        "car_price": 21000.0,
+        "buyer_name": "вфі",
+        "buyer_phone": "+380аявп",
+        "buyer_email": "яа",
+        "status": "Нове"
+    },
+    {
+        "id": 5,
+        "car_id": 1,
+        "car_brand": "Toyota",
+        "car_model": "Camry",
+        "car_price": 17999.0,
+        "buyer_name": "Святослав",
+        "buyer_phone": "+3809701114063",
+        "buyer_email": "вап",
+        "status": "Нове"
     }
-  ]
+]
