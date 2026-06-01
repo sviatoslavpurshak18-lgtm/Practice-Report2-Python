@@ -264,7 +264,7 @@ class MainView:
                 self.model_search,
                 ft.Text("ТОП моделі", size=12, weight=ft.FontWeight.W_600, color=DARK),
                 self.models_col,
-                ft.ElevatedButton("Застосувати", width=280,
+                ft.Button("Застосувати", width=280,
                     style=ft.ButtonStyle(bgcolor=RED, color=WHITE,
                         shape=ft.RoundedRectangleBorder(radius=10),
                         padding=ft.padding.symmetric(vertical=12)),
@@ -701,7 +701,7 @@ class MainView:
             ], spacing=14, tight=True)),
             actions=[
                 ft.TextButton("Закрити", on_click=close),
-                ft.ElevatedButton(
+                ft.Button(
                     "🛒  Купити",
                     on_click=buy,
                     style=ft.ButtonStyle(
